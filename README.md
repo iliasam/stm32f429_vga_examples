@@ -1,5 +1,6 @@
 # stm32f429_vga_examples
 Code examples of using STM32F429 for generating VGA signals.
+
 Hardware: Core4X9I devboard + custom devboard with R-2R VGA DAC, USB, SDCard and camera connectors:
 ![Alt text](schematic/ModuleSchematic.png?raw=true "Image")
 
@@ -10,4 +11,4 @@ Hardware: Core4X9I devboard + custom devboard with R-2R VGA DAC, USB, SDCard and
 
 "sdcard_vga_example" - STM32F429 reads image from SD Card and show it at VGA display.
 
-Thre are some photos of VGA display at "Photos" directory.
+There are some photos of VGA display at "Photos" directory.
