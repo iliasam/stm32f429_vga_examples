@@ -5,10 +5,12 @@ Hardware: Core4X9I devboard + custom devboard with R-2R VGA DAC, USB, SDCard and
 ![Alt text](schematic/ModuleSchematic.png?raw=true "Image")
 
 
-"ov7670_camera" - picture from OV7670 camera is displayed at VGA display.
+"ov7670_camera" - picture from OV7670 camera is displayed at VGA display.  Written for SPL.  
 
-"simple_vga_example" - display some simple patterns at VGA display.
+"simple_vga_example" - display some simple patterns at VGA display.  Written for SPL.  
 
-"sdcard_vga_example" - STM32F429 reads image from SD Card and show it at VGA display.
+"simple_vga_example_hal" - display some simple patterns at VGA display.  Written for HAL.  
+
+"sdcard_vga_example" - STM32F429 reads image from SD Card and show it at VGA display.  Written for SPL.  
 
 There are some photos of VGA display at "Photos" directory.
