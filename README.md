@@ -1,5 +1,5 @@
 # stm32f429_vga_examples
-Code examples of using STM32F429 for generating VGA signals.
+Code examples of using STM32F429 for generating VGA signals (HAL and SPL).
 
 Hardware: Core4X9I devboard + custom devboard with R-2R VGA DAC, USB, SDCard and camera connectors:
 ![Alt text](schematic/ModuleSchematic.png?raw=true "Image")
