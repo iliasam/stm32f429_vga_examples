@@ -14,3 +14,5 @@ Hardware: Core429I devboard + custom devboard with R-2R VGA DAC, USB, SDCard and
 "sdcard_vga_example" - STM32F429 reads image from SD Card and show it at the VGA display.  Written for SPL.  
 
 There are some photos of VGA display at "Photos" directory.
+  
+See also this repo: https://github.com/iliasam/STM32_DisplayLink - drawing images at the VGA display using DisplayLink adapter.
