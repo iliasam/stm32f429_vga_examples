@@ -70,6 +70,8 @@ void MX_LTDC_Init(void)
   {
     Error_Handler();
   }
+  
+  //HAL_LTDC_EnableDither(&hltdc);
 
   LCD_SetFont(&LCD_DEFAULT_FONT); /* Set default font */  
 }
@@ -264,6 +266,14 @@ void LCD_DisplayStringLine(uint16_t Line, uint8_t *ptr)
   }
 }
 
+void lcd_draw_vertical_line(uint16_t x, uint16_t color)
+{
+  for (uint16_t i = 0; i < LCD_PIXEL_HEIGHT; i++)
+  {
+    lcd_set_pixel(x, i, color);
+  }
+}
+
 //Convert from 565 to 888
 uint32_t lcd_convert_to_color32(uint16_t color)
 {
@@ -276,6 +286,22 @@ uint32_t lcd_convert_to_color32(uint16_t color)
   uint8_t b8 = ( b5 << 3 ) | (b5 >> 2);
   
   return ((uint32_t)r8 << 16) | ((uint32_t)g8 << 8) | (uint32_t)b8;
+}
+
+void lcd_set_pixel(uint16_t x, uint16_t y, uint16_t color)
+{
+  uint32_t pos = (y * LCD_PIXEL_WIDTH + x) * LCD_BYTES_IN_PIXEL;
+  *(__IO uint16_t*)(LCD_FRAME_BUFFER + pos) = color;
+}
+
+uint16_t grayscale_to_rgb565(uint8_t value)
+{
+  uint16_t red = (uint8_t)(value >> 3);
+  uint16_t green = (uint8_t)(value >> 2);
+  uint16_t blue = (uint8_t)(value >> 3);
+
+  uint16_t result = (red << 11) | (green << 5) | (blue << 0);
+  return result;
 }
 
 void lcd_draw_test_picture(void)

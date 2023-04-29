@@ -57,8 +57,11 @@ sFONT *LCD_GetFont(void);
 void LCD_DrawChar(uint16_t Xpos, uint16_t Ypos, const uint16_t *c);
 void LCD_DisplayChar(uint16_t Line, uint16_t Column, uint8_t Ascii);
 void LCD_DisplayStringLine(uint16_t Line, uint8_t *ptr);
+void lcd_set_pixel(uint16_t x, uint16_t y, uint16_t color);
+void lcd_draw_vertical_line(uint16_t x, uint16_t color);
 
 
 uint32_t lcd_convert_to_color32(uint16_t color);
+uint16_t grayscale_to_rgb565(uint8_t value);
    
 #endif /* __STM32F429_LCD_H */

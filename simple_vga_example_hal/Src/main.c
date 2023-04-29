@@ -66,6 +66,12 @@ int main(void)
   LCD_SetBackColor(LCD_COLOR_YELLOW);
   LCD_SetTextColor(LCD_COLOR_BLACK);
   LCD_DisplayStringLine(LINE(0), (uint8_t*)"ILIASAM VGA TEST - HAL");
+  
+  //grayscale line
+  for (uint16_t i=0; i< 640; i++)
+  {
+    lcd_draw_vertical_line(i, grayscale_to_rgb565(i));
+  }
     
   /* USER CODE END 2 */
 

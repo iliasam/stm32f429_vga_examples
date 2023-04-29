@@ -52,7 +52,6 @@ Mkfile.old
 dkms.conf
 
 *.cout
-*.s
 *.pbi
 /Debug
 simple_vga_example_hal/EWARM/cube_video_test1/Obj/

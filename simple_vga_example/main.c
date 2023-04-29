@@ -64,11 +64,11 @@ int main(void)
   Delay(2000);
   
   //grayscale bars
-  for (i=0; i< 600; i+= 30)
+  for (i=0; i< 600; i+= 10)
   {
     uint16_t color = grayscale_to_rgb565((uint8_t)(i/3));
     LCD_SetTextColor(color);
-    LCD_DrawFullRect(i, 0, 30, 480);
+    LCD_DrawFullRect(i, 0, 10, 480);
   }
   
   Delay(2000);
